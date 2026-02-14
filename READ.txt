@@ -1,5 +1,5 @@
 developed by lidetu gebeye
- finished date 02-14-2026
+finished date 02-14-2026
   Username: admin
   Password: admin123
 URL: http://localhost/ebook-store/admin/
