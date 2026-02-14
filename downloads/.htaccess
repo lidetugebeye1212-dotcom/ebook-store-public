@@ -1,0 +1,10 @@
+# Allow file access through PHP script only
+<FilesMatch "\.pdf$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# But we need to allow PHP to read files
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>

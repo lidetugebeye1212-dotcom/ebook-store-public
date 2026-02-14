@@ -1,0 +1,352 @@
+/* Admin Panel Styles */
+:root {
+    --admin-sidebar-width: 280px;
+    --admin-header-height: 70px;
+    --admin-primary: #6c5ce7;
+    --admin-success: #00b894;
+    --admin-warning: #fdcb6e;
+    --admin-danger: #d63031;
+    --admin-dark: #2d3436;
+    --admin-gray: #636e72;
+    --admin-light: #f5f6fa;
+}
+
+/* Admin Container */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background: var(--admin-light);
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--admin-sidebar-width);
+    background: linear-gradient(180deg, var(--admin-dark) 0%, #1e272e 100%);
+    color: white;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar-header {
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar-header p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+.sidebar-menu {
+    padding: 2rem 0;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s;
+    margin: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.sidebar-menu a i {
+    margin-right: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: var(--admin-primary);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: var(--admin-sidebar-width);
+    padding: 2rem;
+}
+
+/* Admin Header */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+}
+
+.admin-header h1 {
+    font-size: 2rem;
+    color: var(--admin-dark);
+}
+
+.admin-header p {
+    color: var(--admin-gray);
+}
+
+/* Statistics Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.15);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.stat-details h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: var(--admin-dark);
+}
+
+.stat-details p {
+    color: var(--admin-gray);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Admin Cards */
+.admin-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.admin-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.admin-card-header h2 {
+    font-size: 1.3rem;
+    color: var(--admin-dark);
+    display: flex;
+    align-items: center;
+}
+
+.admin-card-header h2 i {
+    margin-right: 0.5rem;
+    color: var(--admin-primary);
+}
+
+/* Admin Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 1rem;
+    background: rgba(108, 92, 231, 0.05);
+    color: var(--admin-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.admin-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.admin-table tr:hover {
+    background: rgba(108, 92, 231, 0.02);
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-pending {
+    background: rgba(253, 203, 110, 0.1);
+    color: #fdcb6e;
+}
+
+.status-processing {
+    background: rgba(108, 92, 231, 0.1);
+    color: #6c5ce7;
+}
+
+.status-completed {
+    background: rgba(0, 184, 148, 0.1);
+    color: #00b894;
+}
+
+.status-cancelled {
+    background: rgba(214, 48, 49, 0.1);
+    color: #d63031;
+}
+
+/* Action Buttons */
+.btn-action {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0 0.2rem;
+}
+
+.btn-edit {
+    background: rgba(108, 92, 231, 0.1);
+    color: #6c5ce7;
+}
+
+.btn-delete {
+    background: rgba(214, 48, 49, 0.1);
+    color: #d63031;
+}
+
+.btn-view {
+    background: rgba(0, 184, 148, 0.1);
+    color: #00b894;
+}
+
+.btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Book Form */
+.book-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--admin-dark);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.form-control-file {
+    padding: 0.5rem 0;
+}
+
+/* Ethiopian Book Badge */
+.ethiopian-badge-admin {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.8rem;
+    background: linear-gradient(135deg, #1a5f7a 0%, #2c3e50 100%);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.ethiopian-badge-admin i {
+    margin-right: 0.3rem;
+}
+
+/* Responsive Admin */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        transform: translateX(-100%);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

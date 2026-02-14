@@ -1,0 +1,12 @@
+developed by lidetu gebeye
+ finished date 02-14-2026
+ Username: admin
+Password: admin123
+URL: http://localhost/ebook-store/admin/
+
+
+
+
+Username: customer  
+Password: password123
+URL: http://localhost/ebook-store/public/login.php
