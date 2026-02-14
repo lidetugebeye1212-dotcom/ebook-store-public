@@ -4,7 +4,7 @@ finished date 02-14-2026
   Password: admin123
 URL: http://localhost/ebook-store/admin/
 
-
+this is amazing website fully functional
 
 
 Username: customer  
