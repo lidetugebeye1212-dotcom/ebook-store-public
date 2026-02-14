@@ -10,4 +10,3 @@ this is amazing website fully functional
 Username: customer  
 Password: password123
 URL: http://localhost/ebook-store/public/login.php
-jhdxkzkj
